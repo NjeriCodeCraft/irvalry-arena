@@ -3,7 +3,7 @@
 Built for the DEV Weekend Challenge: Passion Edition.
 
 Type in two things people love fiercely — teams, fandoms, hobbies, anything — and Gemini (Google AI) generates a live head-to-head: creative stats, dramatic ringside commentary, and a trash-talk exchange, ending in a verdict.
-
+https://rivalry-arena.vercel.app/
 ## Run it locally
 
 No build tools needed — it's plain HTML/CSS/JS.

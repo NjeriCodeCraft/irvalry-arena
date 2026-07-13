@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rivalry Arena — Where Passion Fights Back</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">⚔</span>
+      <span class="brand-name">RIVALRY ARENA</span>
+    </div>
+    <button id="keyBtn" class="key-btn">API Key</button>
+  </header>
+
+  <main class="arena" id="setupView">
+    <div class="arena-glow"></div>
+
+    <h1 class="hero-title">
+      EVERY PASSION<br/>
+      HAS A <span class="hero-vs">RIVAL</span>
+    </h1>
+    <p class="hero-sub">Type in two things people love fiercely. Gemini will settle the score — with stats, trash talk, and a verdict.</p>
+
+    <div class="ring">
+      <div class="fighter fighter-left">
+        <label class="fighter-label">CONTENDER 01</label>
+        <input type="text" id="fighterA" class="fighter-input" placeholder="e.g. Messi fans" maxlength="40" />
+      </div>
+
+      <div class="vs-divider">
+        <span class="vs-text">VS</span>
+      </div>
+
+      <div class="fighter fighter-right">
+        <label class="fighter-label">CONTENDER 02</label>
+        <input type="text" id="fighterB" class="fighter-input" placeholder="e.g. Ronaldo fans" maxlength="40" />
+      </div>
+    </div>
+
+    <button id="startBtn" class="start-btn">
+      <span>START THE RIVALRY</span>
+    </button>
+    <p id="errorMsg" class="error-msg"></p>
+  </main>
+
+  <section class="loading-view" id="loadingView" hidden>
+    <div class="loading-inner">
+      <div class="pulse-ring"></div>
+      <p class="loading-text" id="loadingText">ENTERING THE ARENA…</p>
+    </div>
+  </section>
+
+  <section class="result-view" id="resultView" hidden>
+    <button id="againBtn" class="again-btn">↺ New Rivalry</button>
+
+    <div class="impact-flash" id="impactFlash"></div>
+
+    <div class="result-header">
+      <div class="result-name" id="resultA"></div>
+      <div class="result-vs">VS</div>
+      <div class="result-name" id="resultB"></div>
+    </div>
+
+    <div class="verdict-banner" id="verdictBanner">
+      <span class="verdict-label">VERDICT</span>
+      <span class="verdict-winner" id="verdictWinner"></span>
+    </div>
+
+    <button id="voiceBtn" class="voice-btn">🔊 Hear It Play Out</button>
+
+    <div class="stats-grid" id="statsGrid"></div>
+
+    <div class="commentary-block">
+      <h3 class="section-label">RINGSIDE COMMENTARY</h3>
+      <p class="commentary-text" id="commentaryText"></p>
+    </div>
+
+    <div class="trash-talk-block">
+      <h3 class="section-label">TRASH TALK</h3>
+      <div class="trash-talk" id="trashTalk"></div>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="keyModal" hidden>
+    <div class="modal">
+      <h2>Google AI API Key</h2>
+      <p>Paste your free Gemini API key. It's stored only in your browser (localStorage), never sent anywhere but Google.</p>
+      <input type="password" id="apiKeyInput" placeholder="AIza..." class="modal-input" />
+      <div class="modal-actions">
+        <button id="saveKeyBtn" class="modal-save">Save</button>
+        <button id="closeKeyBtn" class="modal-close">Cancel</button>
+      </div>
+      <a href="https://aistudio.google.com/apikey" target="_blank" class="modal-link">Get a free key at aistudio.google.com →</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
